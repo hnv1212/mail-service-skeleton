@@ -1,9 +1,24 @@
+import { IsEmail, IsNotEmpty } from 'class-validator'
+
 export class MailSystemConnectDto {
-    issueUrl: string;
-    clientId: string;
-    clientSecret: string;
-    redirectUri: string;
-    tokenEndpoint: string;
-    code: string;
-    type: string;
+    @IsNotEmpty()
+    IssueUrl: string;
+
+    @IsNotEmpty()
+    ClientId: string;
+
+    @IsNotEmpty()
+    ClientSecret: string;
+
+    @IsNotEmpty()
+    RedirectUri: string;
+
+    @IsNotEmpty()
+    TokenEndpoint: string;
+
+    @IsNotEmpty()
+    Code: string;
+
+    @IsNotEmpty()
+    Type: string;
 }

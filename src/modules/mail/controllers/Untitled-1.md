@@ -1,0 +1,1 @@
+https://login.microsoftonline.com/common/oauth2/v2.0/authorize?response_type=code&client_id=4a0e2c7f-bcc8-4fbc-b68c-37e6322adc81&state=connect_outlook&scope=openid%20email%20profile%20offline_access%20calendars.readWrite%20contacts.readWrite%20mail.readWrite%20Mail.Send%20tasks.readwrite&redirect_uri=http://localhost:3000

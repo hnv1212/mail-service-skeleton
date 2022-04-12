@@ -4,7 +4,9 @@ export interface MailConfigInterface {
 
 }
 
-export const mailConfig = registerAs('mailConfig', ():any => ({
+export const mailConfigToken = 'mail.config'
+
+export const mailConfig = registerAs(mailConfigToken, ():any => ({
     msgraph: {
         server: {
             issueUrl: '',

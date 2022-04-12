@@ -36,7 +36,7 @@ export class MailToken {
     // json
     protected _metadata: any;
 
-    getAllowedTypes() {
+    static getAllowedTypes() {
         return [TYPE_OUTLOOK, TYPE_GOOGLE]
     }
 

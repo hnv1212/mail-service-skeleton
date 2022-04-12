@@ -1,6 +1,8 @@
-import { IMailService } from "../mail-service.interface";
+import { IMailService } from "../interfaces";
+import { GoogleAdapter } from "./google.adapter";
 
-export class MSGraphMailAdapter implements IMailService {
+
+export class GoogleMailAdapter extends GoogleAdapter implements IMailService {
     getMailList: () => void;
     getFolderList: () => void;
     sendMail: () => void;

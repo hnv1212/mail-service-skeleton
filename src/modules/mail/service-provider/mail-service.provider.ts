@@ -1,4 +1,5 @@
-import { IMailService } from "./mail-service.interface";
+import { IMailService } from "../interfaces";
+
 
 export class MailServiceProvider implements IMailService{
     protected adapter: any;

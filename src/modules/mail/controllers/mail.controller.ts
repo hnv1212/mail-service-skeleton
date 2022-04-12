@@ -10,7 +10,7 @@ export class MailController {
     ) { }
 
     @Post()
-    index(@Req() request: Request) {
+    getMails(@Req() request: Request) {
         // params = request.body
         // mailList = MailHelper.makeMailCriteria(params)
         // return mailService.getMailList(mailList, pagination)

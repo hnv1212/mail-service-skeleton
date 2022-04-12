@@ -1,8 +1,11 @@
 import { HttpService } from "@nestjs/axios";
+import { Injectable } from "@nestjs/common";
 import { AxiosRequestConfig } from 'axios';
+import { UserCredentials } from "./user-credentials";
 
+@Injectable()
 export class MSGraphService {
-    constructor(private httpService: HttpService) { }
+    constructor(private httpService: HttpService, public userCredentials: UserCredentials) { }
     
     async createCalendarEvent() { }
     async getEvent() { }
@@ -33,10 +36,14 @@ export class MSGraphService {
     async getAllTask() {}
     
     private send(url, method, data, options = []) { 
+        const accessToken = this.userCredentials.accessToken;
+
         const configs: AxiosRequestConfig = {
             url: url,
             method: method,
-            
+            headers: {
+                Authorization: `Bearer ${accessToken}`
+            }
         }
     }
     private handleMailAttachment() {}
